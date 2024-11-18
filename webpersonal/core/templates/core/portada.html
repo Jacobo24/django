@@ -1,0 +1,17 @@
+{% extends 'core/base.html' %}
+
+{% load static %}
+
+{% block title %}Portada{% endblock %}
+
+{% block background %}{% static 'core/img/home-bg.jpg' %}{% endblock%}
+
+{% block headers %}
+    <h1 style='font-size: 40px;'>María González</h1>
+    <span class="subheading">Estudiante de Ingeniería Matemática e Ingeniería Informática</span>
+{% endblock %}
+
+{% block content %}
+    <h2>Mi Web Personal</h2>
+    <p style = 'font-size: 17px;'>Bienvenidos. En esta página encontrarás información sobre mi formación académica y experiencia profesional.</p>
+{% endblock %}
