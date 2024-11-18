@@ -45,16 +45,13 @@
     </nav>
 
     <!-- Cabecera dinámica -->
-    <header class="masthead" style="background-image: url('{% block background_image %}{% endblock %}')">
+    <header class="masthead" style="background-image: url('{% block background %}{% endblock %}')">
         <div class="overlay"></div>
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-md-10 mx-auto">
                     <div class="site-heading">
-                        {% block header_content %}
-                        <h1>Jacobo Calviño</h1>
-                        <span class="subheading">Ingeniero Matemático</span>
-                        {% endblock %}
+                        {% block headers %}{% endblock %}
                     </div>
                 </div>
             </div>
@@ -62,10 +59,10 @@
     </header>
 
     <!-- Contenido -->
-    <main class="container mt-5">
-        {% block content %}
-        {% endblock %}
-    </main>
+    <div class="container">
+        {% block content %}{% endblock %}
+    </div>
+    {% if request.path != "/" %}<hr>{% endif %}
 
     <!-- Pié de página -->
     <footer>

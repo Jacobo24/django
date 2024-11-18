@@ -1,6 +1,24 @@
 {% extends 'core/base.html' %}
+
+{% load static %}
 {% block title %}Acerca de{% endblock %}
+
+{% block background %}{% static 'core/img/about-bg.jpg' %}{% endblock%}
+{% block headers %}
+    <h1 style='font-size: 50px;'>Acerca de</h1>
+    <span class="subheading">Biografía</span>
+{% endblock %}
+
 {% block content %}
-    <h2>Acerca de</h2>
-    <p>Me llamo Jacobo y estoy aprendiendo Django</p>
+    <div class="row">
+        <div class="col-lg-7 col-md-8">
+            <h2 class="section-heading">Jacobo Calviño</h2>
+            <p style="font-size: 17px; text-align: justify; ">
+                Hola, soy Jacobo y estoy aprendiendo Django.
+            </p>
+            <p style="font-size: 17px; text-align: justify;">
+                Me encanta programar y aprender nuevas tecnologías. En mi tiempo libre, disfruto del ajedrez y el deporte.
+            </p>
+        </div>
+    </div>
 {% endblock %}
